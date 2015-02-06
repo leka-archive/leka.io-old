@@ -1,0 +1,35 @@
+// Colors
+$lgreen: #aecd38;
+$lpink: #ff2d7c;
+$lblue: #66bddf;
+$lorange: #f7a018;
+$lyellow: #ffca00;
+$lgrey: #7b7b7b;
+$ldarkgrey: #515151;
+
+// Logos
+$leka-logo: 'https://www.dropbox.com/s/v97gyf2bfzg16lk/Logo_Leka_Small.png?raw=1';
+$moti-logo: 'https://www.dropbox.com/s/q4g1vw8qgkuc62d/Logo_Moti-09.png?raw=1';
+
+// Mixins
+@mixin vertical-horizontal-centering() {
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	@include prefixer(box-align, center, webkit moz ms spec);
+	-ms-flex-align: center;
+	@include prefixer(align-items, center, webkit spec);
+	@include prefixer(box-pack, center, webkit moz);
+	-ms-flex-pack: center;
+	@include prefixer(justify-content, center, webkit spec);
+
+}
+
+@mixin nice-shadow() {
+
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+
+}

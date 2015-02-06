@@ -1,0 +1,21 @@
+.video {
+
+	@include outer-container;
+	@include span-columns(8);
+	@include shift(2);
+	@include padding(50px null 50px null);
+
+	.video-wrapper {
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+		position: relative;
+
+		embed,
+		object,
+		iframe {
+			@include position(absolute, 0px null null 0px);
+			@include size(100%);
+		}
+	}
+}

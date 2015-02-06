@@ -1,0 +1,85 @@
+.hero {
+	$base-border-radius: 3px !default;
+	$base-accent-color: #477DCA !default;
+	$large-screen: em(860) !default;
+
+	$hero-background-top: #7F99BE;
+	$hero-background-bottom: #20392B;
+	$hero-color: white;
+	$hero-image: '/img/moti/Moti-day.jpg';
+
+	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), (url($hero-image));
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	@include nice-shadow();
+	@include vertical-horizontal-centering();
+	height: 100%;
+
+	.hero-logo img {
+		height: 10em;
+		margin-bottom: 1em;
+	}
+
+	.hero-inner {
+		@include outer-container;
+		@include clearfix;
+		color: $hero-color;
+		text-align: center;
+		z-index:10;
+		background: rgba(52, 27, 43, 0.5);
+		border-radius: 20px;
+
+		padding: 90px 40px 90px 40px;
+		margin: 10px;
+
+		@include media (max-width $horizontal-bar-mode) {
+			padding: 40px inherit;
+		}
+
+		.hero-copy {
+			text-align: center;
+
+			h1 {
+				font-size: 2.8em;
+				@include media (max-width $horizontal-bar-mode) {
+					font-size: 2.2em;
+				}
+			}
+
+			p {
+				font-weight: 200;
+				font-size: 1.6em;
+				line-height: 1.4em;
+				@include media (max-width $horizontal-bar-mode) {
+					font-size: 1.2em;
+				}			
+			}
+		}
+
+		button {
+			@include button(flat, transparent);
+			padding: 0.7em 1em;
+			margin: 0 0.4em;
+			min-width: 160px;
+			font-weight: 200;
+			font-size: 1em;
+			line-height: 1.4em;
+
+			.pre-order {
+				color: blue;
+				background-color: white;
+				box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+			}
+			@include media (max-width $horizontal-bar-mode) {
+				font-size: 1.2em;
+				min-width: 60%;
+				margin-bottom: 0.8em;
+			}
+
+		}
+	}
+
+}
