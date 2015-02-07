@@ -12,11 +12,12 @@ cd ~/$SOURCEFOLDER/$USR/$USR
 grunt $VERSION
 
 # Run the app
-APPSCRIPT='cd /home/'$USR-$VERSION'/'$USR'/ ;\
+APPSCRIPT='source ~/.zshrc;\
+cd /home/'$USR-$VERSION'/'$USR'/ ;\
 npm install --production ;\
 export NODE_ENV='$VERSION' ;\
-forever stop app.js ;\
-forever start app.js ;\
+pm2 stop app.js ;\
+pm2 start app.js ;\
 sudo cp /home/'$USR-$VERSION'/'$USR'/sh/'$VERSION'/nginx.conf /etc/nginx/sites-available/'$USR-$VERSION' ;\
 sudo ln -s /etc/nginx/sites-available/'$USR-$VERSION' /etc/nginx/sites-enabled/ ;\
 sudo service nginx reload'

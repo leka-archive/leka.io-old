@@ -16,10 +16,10 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'client/scss/',
+          cwd: 'public/scss/',
           src: ['*.scss'],
-          dest: 'client/css',
-          ext: '.<%= pkg.version %>.css'
+          dest: 'public/css',
+          ext: '.css'
         }]
       },
       prod: {
@@ -28,9 +28,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'client/scss/',
+          cwd: 'public/scss/',
           src: ['*.scss'],
-          dest: 'pkg/client/css',
+          dest: 'pkg/public/css',
           ext: '.css'
         }]
       }
@@ -119,14 +119,6 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-      quick: {
-        files: [{
-          expand: true,
-          cwd: 'client/',
-          src: ['img/*.{png,jpg,gif}'],
-          dest: 'pkg/client/'
-        }]
-      },
       full: {
         files: [{
           expand: true,
@@ -134,33 +126,8 @@ module.exports = function(grunt) {
           src: ['img/**/*.{png,jpg,gif}'],
           dest: 'pkg/client/'
         }]
-      },
-      pub: {
-        files: [{
-          expand: true,
-          cwd: 'client/img-pub',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'pkg/client/img'
-        }]
       }
     },
-
-    //    requirejs: {
-    //      compile: {
-    //        options: {
-    //          name: "app",
-    //          baseUrl: "client/js/",
-    //          mainConfigFile: "client/js/config.js",
-    //          out: "pkg/client/js/<%= pkg.name %>.<%= pkg.version %>.min.js",
-    //          findNestedDependencies: true,
-    //          preserveLicenseComments: false,
-    //          optimize: "uglify",
-    //          uglify: {
-    //            no_mangle: true
-    //          }
-    //        }
-    //      }
-    //    },
 
     'sftp-deploy': {
       prod: {
