@@ -1,0 +1,65 @@
+header{
+  position: fixed;
+  width: 100%; 
+  z-index: 1;
+  a{color: $dark-grey;}
+
+  .content{
+    background-color: $grey-0;
+    height: 42px;
+    border-bottom: solid $grey-4 1px;
+  }
+
+  .logo{
+    float: left;
+    width: 100px; height: 40px;
+    background: url('../img/header.png') 0px 0px no-repeat;
+    background-size: 100px 40px;
+    margin-left: 6px;
+    margin-top: 1px;
+    @media (max-width: $break-medium){display: none;}
+  }
+
+  nav ul{
+    text-align: right;
+    @media (max-width: $break-medium){text-align: center;border-left: solid $grey-4 1px;}
+
+    li{
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+
+      &.current{ 
+        @media (max-width: $break-medium){ display: inline-block;}
+        a{ background: white;}
+      }
+
+      a{
+        display: inline-block;
+        height: 41px;
+        line-height: 39px;
+        padding: 0 14px;
+        border-left: solid $grey-4 1px;
+        &:hover{background-color: $grey-2;}
+        &:active{background-color: white;}
+        @media (max-width: $break-medium){padding: 0 6px; font-size: 14px;}
+      }
+
+      &.twitter{
+        @media (max-width: $break-medium){width: 0; height: 41px; display: inline-block; border-left: solid $grey-4 1px;}
+
+        a{
+          width: 80px;
+          @media (max-width: $break-medium){display: none;}
+
+          div{
+            width: 41px; height: 41px;
+            background: url('../img/twitter.png') 0px 0px no-repeat;
+            background-size: 41px 41px;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}

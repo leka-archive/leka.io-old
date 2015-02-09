@@ -8,7 +8,7 @@ VERSION='prod'
 SERVER='leka.cloudapp.net'
 
 # Deploy sources
-cd ~/$SOURCEFOLDER/$USR/$USR
+cd ~/$SOURCEFOLDER/$USR
 grunt $VERSION
 
 # Run the app

@@ -1,0 +1,44 @@
+footer{
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  border-top: 1px solid $grey-4;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  @media (max-width: $break-small){
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .col{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    @media (max-width: $break-medium){width: 50%;}
+    @media (max-width: $break-small){width: 100%;}
+    .foot-ico{width: 30px; height: 30px; opacity: 0.5;}
+
+    &.left{
+      width: 40%; text-align: left; line-height: 29px;
+      @media (max-width: $break-small){width: 50%;}
+    }
+
+    &.middle{
+      width: 20%;
+      @media (max-width: $break-small){display: none;}
+    }
+
+    &.right{
+      width: 40%; text-align: right;
+      @media (max-width: $break-small){width: 50%;}
+    }
+
+    a{
+      font-size: 14px;
+      color: $fluo-blue;
+      &:not(:last-child){padding-right:10px;} 
+      @media (max-width: $break-small){&:not(:last-child){padding-right:4px;}}
+    }
+  }
+}

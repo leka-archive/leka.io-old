@@ -65,13 +65,13 @@ module.exports = function(grunt) {
 
     watch: {
       scss: {
-        files: ['client/scss/**/*.scss'],
+        files: ['public/scss/**/*.scss'],
         tasks: ['sass:dev']
       },
       livereload: {
-        files: ['client/js/**/*.js', 'client/css/*.css'],
+        files: ['public/js/**/*.js', 'public/css/*.css'],
         options: {
-          livereload: true
+          livereload: 35730
         }
       }
     },
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     clean: {
-      css: ["client/css/*"],
+      css: ["public/css/*"],
       pkg: ["pkg/"],
     },
 
@@ -108,13 +108,6 @@ module.exports = function(grunt) {
             'views/**'
           ], dest: 'pkg/'}
         ]
-      },
-      dev: {
-        files: [
-          {expand: true, cwd: 'client/', src: [
-            'js/**/*'
-          ], dest: 'pkg/client/'}
-        ]
       }
     },
 
@@ -122,9 +115,9 @@ module.exports = function(grunt) {
       full: {
         files: [{
           expand: true,
-          cwd: 'client/',
+          cwd: 'public/',
           src: ['img/**/*.{png,jpg,gif}'],
-          dest: 'pkg/client/'
+          dest: 'pkg/public/'
         }]
       }
     },
@@ -158,9 +151,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-sftp-deploy');
 
-  grunt.registerTask('dev', ['clean:pkg', 'sass:prod', 'copy', 'imagemin:full', 'sftp-deploy:dev', 'bump']);
-  grunt.registerTask('pre', ['clean:pkg', 'sass:prod', 'copy:main', 'imagemin:quick', 'sftp-deploy:pre', 'bump']);
-  grunt.registerTask('prefull', ['clean:pkg', 'sass:prod', 'copy:main', 'imagemin:full', 'sftp-deploy:pre', 'bump']);
-  grunt.registerTask('prod', ['clean:pkg', 'sass:prod', 'copy:main', 'imagemin:full', 'sftp-deploy:prod', 'bump']);
-  grunt.registerTask('pub', ['clean:pkg', 'sass:prod', 'copy:main', 'imagemin:full', 'imagemin:pub', 'sftp-deploy:pub', 'bump']);
+  grunt.registerTask('prod', ['clean:pkg', 'sass:prod', 'copy:main', 'imagemin:full', 'sftp-deploy', 'bump']);
 };
