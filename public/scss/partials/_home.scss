@@ -209,8 +209,8 @@
           &:not(:last-child){margin-right: 1%;}
           &:not(:first-child){margin-left: 1%;}
 
-          @media (max-width: $break-medium){ 
-            width: 100%; 
+          @media (max-width: $break-medium){
+            width: 100%;
             margin: 0 0 20px 0 !important;
           }
 

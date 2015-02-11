@@ -11,28 +11,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.bodyParser());
 initializer.start(app);
 
-
-// EJS Helpers
-//Helpers
-//var padStr = function(i) {
-//    return (i < 10) ? "0" + i : "" + i;
-//};
-//
-//app.locals.dateToDDMMYYYY = function(dte) {
-//    if (dte == null)
-//        return "-";
-//    return padStr(dte.getDate()) + '/' + padStr(1 + dte.getMonth()) + '/' + padStr(dte.getFullYear());
-//};
-
-// Routes
-//app.get('/', function(req, res) {
-//    res.writeHead(301, {Location: '/home'});
-//    res.end();
-//});
-app.get('/home', homeCtrl.get);
-
+app.get('/', homeCtrl.get);
 app.use(function(req, res, next){
-    res.redirect('/home');
+    res.redirect('/');
 });
 
 app.listen(config.port);

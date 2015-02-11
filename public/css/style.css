@@ -90,9 +90,6 @@ header {
     background-size: 100px 40px;
     margin-left: 6px;
     margin-top: 1px; }
-    @media (max-width: 820px) {
-      header .logo {
-        display: none; } }
   header nav ul {
     text-align: right; }
     @media (max-width: 820px) {
