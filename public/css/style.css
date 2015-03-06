@@ -2,14 +2,14 @@
 /* Mixin */
 ::selection {
   color: #eee;
-  background-color: #85aada; }
+  background-color: #85AADA; }
 
 a {
-  color: #85aada;
+  color: #85AADA;
   text-decoration: none; }
 
 body {
-  background-color: #f7f7f7; }
+  background-color: #F7F7F7; }
 
 .noty {
   display: none !important; }
@@ -22,7 +22,7 @@ body {
 html, body, input, button, select, textarea, table, h3, h4, h5, h6 {
   font-family: 'camingodos-web', sans-serif;
   font-weight: 300;
-  color: #3e3d40;
+  color: #3E3D40;
   font-size: 16px;
   margin: 0; }
 
@@ -60,13 +60,13 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #3e3d40;
+  color: #3E3D40;
   border: 1px solid #b1b1b1;
   background-color: transparent; }
   .btn:disabled {
     opacity: 0.4; }
   .btn:hover, .btn:focus {
-    background-color: #d9dadb;
+    background-color: #D9DADB;
     text-decoration: none;
     outline: 0; }
   .btn:active {
@@ -77,16 +77,16 @@ header {
   width: 100%;
   z-index: 1; }
   header a {
-    color: #3e3d40; }
+    color: #3E3D40; }
   header .content {
-    background-color: #fbfbfb;
+    background-color: #FBFBFB;
     height: 42px;
-    border-bottom: solid #d9dadb 1px; }
+    border-bottom: solid #D9DADB 1px; }
   header .logo {
     float: left;
     width: 100px;
     height: 40px;
-    background: url("../img/header.png") 0px 0px no-repeat;
+    background: url('../img/header.png') 0px 0px no-repeat;
     background-size: 100px 40px;
     margin-left: 6px;
     margin-top: 1px; }
@@ -95,7 +95,7 @@ header {
     @media (max-width: 820px) {
       header nav ul {
         text-align: center;
-        border-left: solid #d9dadb 1px; } }
+        border-left: solid #D9DADB 1px; } }
     header nav ul li {
       display: inline-block;
       vertical-align: top;
@@ -110,7 +110,7 @@ header {
         height: 41px;
         line-height: 39px;
         padding: 0 14px;
-        border-left: solid #d9dadb 1px; }
+        border-left: solid #D9DADB 1px; }
         header nav ul li a:hover {
           background-color: #f1f1f1; }
         header nav ul li a:active {
@@ -124,7 +124,7 @@ header {
           width: 0;
           height: 41px;
           display: inline-block;
-          border-left: solid #d9dadb 1px; } }
+          border-left: solid #D9DADB 1px; } }
       header nav ul li.twitter a {
         width: 80px; }
         @media (max-width: 820px) {
@@ -133,7 +133,7 @@ header {
         header nav ul li.twitter a div {
           width: 41px;
           height: 41px;
-          background: url("../img/twitter.png") 0px 0px no-repeat;
+          background: url('../img/twitter.png') 0px 0px no-repeat;
           background-size: 41px 41px;
           margin: auto; }
 
@@ -141,7 +141,7 @@ footer {
   margin-top: 40px;
   padding-top: 20px;
   padding-bottom: 12px;
-  border-top: 1px solid #d9dadb;
+  border-top: 1px solid #D9DADB;
   margin-left: 40px;
   margin-right: 40px; }
   @media (max-width: 500px) {
@@ -182,7 +182,7 @@ footer {
           width: 50%; } }
     footer .col a {
       font-size: 14px;
-      color: #009adb; }
+      color: #009ADB; }
       footer .col a:not(:last-child) {
         padding-right: 10px; }
       @media (max-width: 500px) {
@@ -195,8 +195,8 @@ footer {
   margin: auto; }
   @media (min-width: 1600px) {
     #container, header .content {
-      border-left: solid #d9dadb 1px;
-      border-right: solid #d9dadb 1px; } }
+      border-left: solid #D9DADB 1px;
+      border-right: solid #D9DADB 1px; } }
 
 #container {
   padding-top: 42px;
@@ -333,10 +333,10 @@ footer {
         width: 100%;
         max-width: 100%;
         font-size: 19px;
-        color: #3e3d40;
+        color: #3E3D40;
         background: transparent;
         border: none;
-        background: #d9dadb; }
+        background: #D9DADB; }
         #container article#art-2 form input:focus, #container article#art-2 form textarea:focus {
           outline: 0;
           background-color: #e6e5e5;
@@ -349,7 +349,7 @@ footer {
       color: white;
       position: relative;
       height: 500px;
-      background-color: #85aada;
+      background-color: #85AADA;
       display: inline-block;
       vertical-align: top;
       width: 32%;
@@ -383,7 +383,7 @@ footer {
           opacity: 0.6;
           margin-bottom: 20px; }
       #container article#art-2 .bios .bio .txt {
-        color: #3e3d40;
+        color: #3E3D40;
         position: relative;
         top: 0;
         height: 100%;
